@@ -21,11 +21,6 @@ func _physics_process(delta: float) -> void:
 		flying_flag = false
 		rotation_degrees.x = (lerp(rotation_degrees.x, 0.0, delta * _rotation_speed))
 	
-	
-	
-	
-	#if abs(rotation_degrees.z - target_angle) < 0.5:
-		#rotation_degrees.z = target_angle
 		
 	print(str(rotation_degrees.z))
 	print(str(flying_flag))

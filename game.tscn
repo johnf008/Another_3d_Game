@@ -4,13 +4,15 @@
 
 [sub_resource type="Environment" id="Environment_80nbo"]
 background_mode = 1
-background_color = Color(3.85046e-06, 0.756761, 0.896779, 1)
+background_color = Color(0.386384, 0.874845, 0.999991, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.839429, 0.804518, 0.800966, 1)
 
 [node name="Game" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 35.9939, 82.5)
-size = Vector3(19, 16, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 35.9939, 82.5)
+size = Vector3(27, 16, 20)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
 transform = Transform3D(-1, 7.57103e-08, 4.37114e-08, 7.57103e-08, 1, 0, -4.37114e-08, 0, -1, 0, 0, 0)
