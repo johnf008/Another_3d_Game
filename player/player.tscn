@@ -22,20 +22,20 @@ material = SubResource("StandardMaterial3D_rkbax")
 script = ExtResource("1_oul6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0.994838, 0.005162)
+transform = Transform3D(1.05277e-15, 4.37114e-08, 1, 1, -1.49012e-08, -1.77636e-15, 1.49012e-08, 1, -4.37114e-08, 0, 0.992257, 0.002581)
 mesh = SubResource("CapsuleMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.14641e-15, 2.62268e-08, -0.6, 0.6, -2.62268e-08, 0, -2.62268e-08, -0.6, -2.62268e-08, 0, 0.994838, 1.00516)
+transform = Transform3D(1.14641e-15, 2.62268e-08, -0.6, -1.77636e-15, 0.6, 2.62268e-08, 0.6, 1.77636e-15, 1.14641e-15, 0, 0.992257, 1.00258)
 mesh = SubResource("SphereMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.14641e-15, 2.62268e-08, -0.6, 0.6, -2.62268e-08, 0, -2.62268e-08, -0.6, -2.62268e-08, 0, 0.994838, -0.994838)
+transform = Transform3D(1.14641e-15, 2.62268e-08, -0.6, -1.77636e-15, 0.6, 2.62268e-08, 0.6, 1.77636e-15, 1.14641e-15, 0, 0.992257, -0.997419)
 mesh = SubResource("BoxMesh_rkbax")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.37114e-08, 4.37114e-08, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 0, 0.994838, -0.005162)
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -1.64203e-15, 0, 1.00258, 0.002581)
 shape = SubResource("CapsuleShape3D_kqu6x")
