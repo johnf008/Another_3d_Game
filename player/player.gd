@@ -16,10 +16,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("fly"):
 		velocity.y = 10.0
 		flying_flag = true
-		rotation_degrees.z = -90 #abs(lerp(rotation_degrees.z, 60.0, delta * _rotation_speed))
+		rotation_degrees.x = (lerp(rotation_degrees.x, 60.0, delta * _rotation_speed))
 	else:
 		flying_flag = false
-		#rotation_degrees.z = abs(lerp(rotation_degrees.z, 120.0, delta * _rotation_speed))
+		rotation_degrees.x = (lerp(rotation_degrees.x, 0.0, delta * _rotation_speed))
 	
 	
 	
