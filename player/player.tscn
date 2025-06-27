@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://cortf3dn5rur8"]
+[gd_scene load_steps=8 format=3 uid="uid://cortf3dn5rur8"]
 
 [ext_resource type="Script" uid="uid://bmmri32hslu4q" path="res://player/player.gd" id="1_oul6g"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oul6g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oul6g"]
+albedo_color = Color(0.156334, 0.558296, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_oul6g"]
+material = SubResource("StandardMaterial3D_oul6g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkbax"]
+albedo_color = Color(0.845876, 4.6398e-05, 0.632121, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rkbax"]
+material = SubResource("StandardMaterial3D_rkbax")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 
@@ -10,8 +22,18 @@
 script = ExtResource("1_oul6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 0, 0.994838, 0.005162)
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0.994838, 0.005162)
 mesh = SubResource("CapsuleMesh_oul6g")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.14641e-15, 2.62268e-08, -0.6, 0.6, -2.62268e-08, 0, -2.62268e-08, -0.6, -2.62268e-08, 0, 0.994838, 1.00516)
+mesh = SubResource("SphereMesh_oul6g")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.14641e-15, 2.62268e-08, -0.6, 0.6, -2.62268e-08, 0, -2.62268e-08, -0.6, -2.62268e-08, 0, 0.994838, -0.994838)
+mesh = SubResource("BoxMesh_rkbax")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
