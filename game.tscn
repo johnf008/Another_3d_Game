@@ -47,3 +47,6 @@ size = Vector3(63.8784, 0.612793, 20)
 
 [node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -27, 51)
+
+[node name="Awesome Sauce Building2" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -27, -47)

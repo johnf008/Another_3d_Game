@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cortf3dn5rur8"]
+[gd_scene load_steps=9 format=3 uid="uid://cortf3dn5rur8"]
 
 [ext_resource type="Script" uid="uid://bmmri32hslu4q" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="ArrayMesh" uid="uid://cmcoggkd0uqrd" path="res://player/Sunglasses.obj" id="2_rkbax"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oul6g"]
 
@@ -39,3 +40,7 @@ skeleton = NodePath("../CollisionShape3D")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -1.64203e-15, 0, 1.00258, 0.002581)
 shape = SubResource("CapsuleShape3D_kqu6x")
+
+[node name="Sunglasses" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 1.20809, 1.00177)
+mesh = ExtResource("2_rkbax")
