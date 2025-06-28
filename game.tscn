@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2l0pjytxk854"]
+[gd_scene load_steps=5 format=3 uid="uid://b2l0pjytxk854"]
 
 [ext_resource type="PackedScene" uid="uid://cortf3dn5rur8" path="res://player/player.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://delnqgh3x7rr1" path="res://level.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://yo6c3rptu286" path="res://level/modules/module_one.tscn" id="2_e2o6t"]
 
 [sub_resource type="Environment" id="Environment_80nbo"]
@@ -11,29 +12,33 @@ ambient_light_color = Color(0.839429, 0.804518, 0.800966, 1)
 
 [node name="Game" type="Node3D"]
 
+[node name="Level" type="Node3D" parent="."]
+script = ExtResource("1_feb5d")
+modules = Array[PackedScene]([ExtResource("2_e2o6t")])
+
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0393066, 18.716, 24.5)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 18.716, -0.333055)
 size = Vector3(63.8784, 0.612793, 20)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -32.9607, -0.844837, 24.5)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, -0.844837, 32.6669)
 size = Vector3(39, 0.612793, 20)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 32.0393, -0.844837, 24.5)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, -0.844837, -32.3331)
 size = Vector3(39, 0.612793, 20)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
-transform = Transform3D(-1, 7.57103e-08, 4.37114e-08, 7.57103e-08, 1, 0, -4.37114e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 0, -0.293747)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_80nbo")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, -9)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.97585, 1, -0.293746)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0732841, -19.925, 24.5463)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, -19.925, -0.367032)
 size = Vector3(63.8784, 0.612793, 20)
 
 [node name="module_one" parent="." instance=ExtResource("2_e2o6t")]

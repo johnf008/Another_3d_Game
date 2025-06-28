@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://3pvr3rr8abyu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qcxv"]
+albedo_color = Color(0.117259, 0.805162, 0, 1)
+metallic = 0.68
+metallic_specular = 1.0
+roughness = 0.4
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fdusb"]
+material = SubResource("StandardMaterial3D_8qcxv")
+top_radius = 2.5
+bottom_radius = 2.5
+height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dp4j5"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.68
+metallic_specular = 1.0
+roughness = 0.4
+
+[node name="Scene Backups" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, -1.62926, 0, 0.707107, 1.62926, 0, 0, 0, 1, 18.2927, -14.4971, 24)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, 1.62926, -8.74228e-08, 0.707107, 1.62926, 0, 6.18172e-08, -1.42435e-07, -1, -19.7073, -14.4971, 24)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D2"]
+transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D2"]
+transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 1.62926, 1.54268e-14, 0.707107, -1.62926, 8.74228e-08, 6.18172e-08, -1.42435e-07, -1, -19.7073, 10.5029, 24)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D3"]
+transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D3"]
+transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, -1.62926, 8.74227e-08, 0.707107, -1.62926, 8.74228e-08, 2.13163e-14, 2.84869e-07, 1, 19.2927, 10.5029, 24)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D4"]
+transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D4"]
+transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("../../../StaticBody3D2/Scene")
+surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
