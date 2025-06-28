@@ -415,7 +415,7 @@ data = PackedVector3Array(26.7856, -6.3231, -10.2034, 26.7735, -6.1499, -10.3767
 script = ExtResource("1_imryr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 38.6369, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 38.6477, 0)
 
 [node name="Another_Scene" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("ArrayMesh_hoqxs")

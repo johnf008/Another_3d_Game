@@ -27,7 +27,7 @@ mesh = SubResource("SphereMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-2.6969e-07, 0, -6.16979, -6.16979, -2.6969e-07, 2.6969e-07, -2.6969e-07, 6.16979, -1.0131e-14, 0, 0.939204, -0.964716)
+transform = Transform3D(-1.55649e-07, 0, -3.56084, -3.56084, -1.55649e-07, 1.55649e-07, -1.55649e-07, 3.56084, -5.84701e-15, 0, 0.939204, -0.964716)
 shape = SubResource("CapsuleShape3D_kqu6x")
 
 [node name="Sunglasses" type="MeshInstance3D" parent="."]

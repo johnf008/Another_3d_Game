@@ -25,43 +25,44 @@ ambient_light_color = Color(0.839429, 0.804518, 0.800966, 1)
 
 [node name="Level" type="Node3D" parent="."]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.157081, 0)
 script = ExtResource("1_feb5d")
 modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm")])
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 18.716, -104.333)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 43.0446, -104.333)
 size = Vector3(63.8784, 0.612793, 20)
 material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, -19.925, -104.367)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, 4.4036, -104.367)
 size = Vector3(63.8784, 0.612793, 20)
 material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, -0.844837, -71.3331)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, 23.4838, -71.3331)
 size = Vector3(39, 0.612793, 20)
 material = SubResource("StandardMaterial3D_ryrav")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, -0.844837, -136.333)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, 23.4838, -136.333)
 size = Vector3(39, 0.612793, 20)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
-transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 2.28939, 0.463756)
+transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 26.618, 0.463756)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_80nbo")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(9.64128e-08, 0.258819, -0.965926, -3.77967e-08, 0.965926, 0.258819, 1, 1.15553e-08, 1.0291e-07, -16.3973, 7, 0.31156)
+transform = Transform3D(1.03546e-07, -0.0972355, -0.995261, -1.49407e-09, 0.995261, -0.0972355, 1, 1.15553e-08, 1.0291e-07, -33.0214, 32.1651, 0.31156)
 
 [node name="module_one" parent="." instance=ExtResource("2_e2o6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3286, -195.177)
 
 [node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -27, 51)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, 51)
 
 [node name="Awesome Sauce Building2" parent="." instance=ExtResource("4_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -27, -47)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, -47)

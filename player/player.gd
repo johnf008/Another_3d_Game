@@ -13,21 +13,21 @@ const DOWNWARD_ANGLE = 120.0
 func _physics_process(delta: float) -> void:
 	const FLY_FALL_FACTOR = 5
 	 
-	if (position.y >= -15.0):
-		velocity.y -= 20.0 * delta
-	else:
-		velocity.y = 0
-		position.y = -15.0
+	#if (position.y >= -15.0):
+	velocity.y -= 20.0 * delta
+	#else:
+		#velocity.y = 0
+		#position.y = -15.0
 	print("Y position: " + str(position.y))
 	
-	if (position.y <= 5.0):
-		velocity.y -= 5.0 * delta
-	else:
-		velocity.y = 0
-		position.y = 5.0
+	#if (position.y <= 5.0):
+		#velocity.y -= 5.0 * delta
+	#else:
+		#velocity.y = 0
+		#position.y = 5.0
 	
 	if Input.is_action_pressed("fly"):
-		velocity.y = 5.0
+		velocity.y = 15.0
 		flying_flag = true
 		rotation_degrees.x = (lerp(rotation_degrees.x, 60.0, delta * _rotation_speed))
 	else:
