@@ -50,7 +50,7 @@ size = Vector3(39, 0.612793, 20)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
-transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 26.618, 0.463756)
+transform = Transform3D(8.74228e-08, -3.3094e-15, 1, 7.57103e-08, 1, 0, -1, 7.57103e-08, 8.74228e-08, 0.0241489, 26.618, 0.463756)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_80nbo")
