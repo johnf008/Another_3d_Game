@@ -21,65 +21,65 @@ roughness = 0.4
 [node name="Scene Backups" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.707107, -1.62926, 0, 0.707107, 1.62926, 0, 0, 0, 1, 18.2927, -14.4971, 24)
+transform = Transform3D(-4.37114e-08, 0, 1, 0.707107, 1.62927, 3.09086e-08, -0.707107, 1.62927, -3.09086e-08, 24.2856, -14.4695, -18.3497)
 mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../StaticBody3D2/Scene")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
-mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
-mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
-surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+skeleton = NodePath("")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.707107, 1.62926, -8.74228e-08, 0.707107, 1.62926, 0, 6.18172e-08, -1.42435e-07, -1, -19.7073, -14.4971, 24)
+transform = Transform3D(-6.01792e-08, 0, 1.37674, 0.973502, 0.224308, 4.25531e-08, -0.973502, 0.224308, -4.25531e-08, 24.2856, -6.7111, -10.5914)
 mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../StaticBody3D2/Scene")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D2"]
-transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
-mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D2"]
-transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
-mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
-surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+skeleton = NodePath("")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.707107, 1.62926, 1.54268e-14, 0.707107, -1.62926, 8.74228e-08, 6.18172e-08, -1.42435e-07, -1, -19.7073, 10.5029, 24)
+transform = Transform3D(-4.21255e-08, 0, 0.963719, 0.681452, 0.157015, 2.97872e-08, -0.681452, 0.157015, -2.97872e-08, 24.2856, -6.3497, -10.23)
 mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../StaticBody3D2/Scene")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D3"]
-transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
-mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D3"]
-transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
-mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
+skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.707107, -1.62926, 8.74227e-08, 0.707107, -1.62926, 8.74228e-08, 2.13163e-14, 2.84869e-07, 1, 19.2927, 10.5029, 24)
+transform = Transform3D(-1.81058e-08, 1.42435e-07, -1, 0.707107, 1.62927, 3.09086e-08, 0.707107, -1.62927, -5.65141e-08, 24.2856, -14.4695, 19.6783)
 mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../StaticBody3D2/Scene")
+skeleton = NodePath("")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D4"]
-transform = Transform3D(1.37674, 0, 0, -8.9407e-08, 0.137674, 0, 0, 0, 1.37674, -4.76837e-07, 4.7619, 0)
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.4927e-08, 1.96096e-08, -1.37674, 0.973502, 0.224308, 4.25532e-08, 0.973502, -0.224308, -7.78053e-08, 24.2856, -6.7111, 11.9199)
 mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
+skeleton = NodePath("")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D4"]
-transform = Transform3D(0.963719, 0, 0, 0, 0.0963719, 0, 0, 0, 0.963719, -9.53674e-07, 4.9837, 0)
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.74489e-08, 1.37267e-08, -0.963719, 0.681452, 0.157015, 2.97872e-08, 0.681452, -0.157015, -5.44638e-08, 24.2856, -6.3497, 11.5585)
 mesh = SubResource("CylinderMesh_fdusb")
-skeleton = NodePath("../../../StaticBody3D2/Scene")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.81058e-08, 1.42435e-07, -1, 0.707107, -1.62927, -5.65141e-08, -0.707107, -1.62927, -3.09086e-08, 24.2856, 10.5115, 19.6783)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.4927e-08, 1.96096e-08, -1.37674, 0.973502, -0.224308, -7.78053e-08, -0.973502, -0.224308, -4.25531e-08, 24.2856, 2.75314, 11.9199)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.74489e-08, 1.37267e-08, -0.963719, 0.681452, -0.157015, -5.44638e-08, -0.681452, -0.157015, -2.97872e-08, 24.2856, 2.39174, 11.5585)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.99231e-08, 0, 1, 0.707107, -1.62927, -5.65141e-08, 0.707107, 1.62927, -5.65142e-08, 24.2856, 10.5115, -19.2698)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.10033e-07, -7.10543e-15, 1.37674, 0.973502, -0.224308, -7.78053e-08, 0.973502, 0.224308, -7.78053e-08, 24.2856, 2.75314, -11.5114)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.70234e-08, 8.88178e-16, 0.963719, 0.681452, -0.157015, -5.44638e-08, 0.681452, 0.157015, -5.44637e-08, 24.2856, 2.39174, -11.15)
+mesh = SubResource("CylinderMesh_fdusb")
+skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_dp4j5")
