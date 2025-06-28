@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2l0pjytxk854"]
+[gd_scene load_steps=6 format=3 uid="uid://b2l0pjytxk854"]
 
 [ext_resource type="PackedScene" uid="uid://cortf3dn5rur8" path="res://player/player.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://delnqgh3x7rr1" path="res://level.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://yo6c3rptu286" path="res://level/modules/module_one.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://c0mkrn36roh8e" path="res://level/background_items/awesome_sauce_building.tscn" id="4_fc0e3"]
 
 [sub_resource type="Environment" id="Environment_80nbo"]
 background_mode = 1
@@ -43,3 +44,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.570
 size = Vector3(63.8784, 0.612793, 20)
 
 [node name="module_one" parent="." instance=ExtResource("2_e2o6t")]
+
+[node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -27, 51)
