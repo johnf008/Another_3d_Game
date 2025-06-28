@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ci5c8vw6b2xga"]
 
-[node name="pipe_module_one" type="Node3D"]
+[node name="scene_template_size" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0393066, 18.716, 24.5)
