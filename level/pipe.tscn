@@ -1,22 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbo5hkjim80a5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4niv"]
+[ext_resource type="Material" uid="uid://j5ri0qlnpap3" path="res://materials/pipe_black.tres" id="1_hrf62"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glmxk"]
 albedo_color = Color(0.117259, 0.805162, 0, 1)
 metallic = 0.68
 metallic_specular = 1.0
 roughness = 0.4
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hrf62"]
-material = SubResource("StandardMaterial3D_u4niv")
+material = SubResource("StandardMaterial3D_glmxk")
 top_radius = 2.5
 bottom_radius = 2.5
 height = 10.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glmxk"]
-albedo_color = Color(0, 0, 0, 1)
-metallic = 0.68
-metallic_specular = 1.0
-roughness = 0.4
 
 [node name="pipe" type="Node3D"]
 
@@ -31,4 +27,4 @@ mesh = SubResource("CylinderMesh_hrf62")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.963719, 0, 0, 0, 0.222053, 0, 0, 0, 0.963719, 0, 23.0529, 0)
 mesh = SubResource("CylinderMesh_hrf62")
-surface_material_override/0 = SubResource("StandardMaterial3D_glmxk")
+surface_material_override/0 = ExtResource("1_hrf62")
