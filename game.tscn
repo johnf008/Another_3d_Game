@@ -13,6 +13,7 @@ ambient_light_color = Color(0.839429, 0.804518, 0.800966, 1)
 [node name="Game" type="Node3D"]
 
 [node name="Level" type="Node3D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_feb5d")
 modules = Array[PackedScene]([ExtResource("2_e2o6t")])
 
