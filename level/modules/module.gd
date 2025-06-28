@@ -4,8 +4,7 @@ extends Node3D
 var speed = 10
 
 func _process(delta):
-	pass
-	#position.x -= speed * delta
-	#if(position.x < -28):
-		#level.spawnModule(position.x + (level.amount * level.offset))
-		#queue_free()
+	position.x -= speed * delta
+	if(position.x < -28):
+		level.spawnModule(position.x + (level.amount * level.offset))
+		queue_free()

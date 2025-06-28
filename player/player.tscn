@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cortf3dn5rur8"]
+[gd_scene load_steps=7 format=3 uid="uid://cortf3dn5rur8"]
 
 [ext_resource type="Script" uid="uid://bmmri32hslu4q" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="ArrayMesh" uid="uid://cmcoggkd0uqrd" path="res://player/Sunglasses.obj" id="2_rkbax"]
@@ -11,36 +11,25 @@ albedo_color = Color(0.156334, 0.558296, 1, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_oul6g"]
 material = SubResource("StandardMaterial3D_oul6g")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkbax"]
-albedo_color = Color(0.845876, 4.6398e-05, 0.632121, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_rkbax"]
-material = SubResource("StandardMaterial3D_rkbax")
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_oul6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.43387e-15, 1.01055e-07, 2.31187, 2.31187, -3.44496e-08, -4.10671e-15, 3.44496e-08, 2.31187, -1.01055e-07, 0, 0.921471, 0.0910766)
+transform = Transform3D(6.85259e-15, 2.84522e-07, 6.5091, 6.5091, -9.69934e-08, -1.15625e-14, 9.69934e-08, 6.5091, -2.84522e-07, 0, 0.71084, -0.715555)
 mesh = SubResource("CapsuleMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.59021e-15, 3.63798e-08, -0.832273, -2.46401e-15, 0.832273, 3.63798e-08, 0.832273, 2.46401e-15, 1.59021e-15, 0, 0.921471, 2.40294)
+transform = Transform3D(4.47726e-15, 1.02428e-07, -2.34328, -6.93746e-15, 2.34328, 1.02428e-07, 2.34328, 6.93746e-15, 4.47726e-15, 0, 0.71084, 5.79354)
 mesh = SubResource("SphereMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.95105e-16, 1.81899e-08, -0.416137, -1.23201e-15, 0.416137, 1.81899e-08, 0.416137, 1.23201e-15, 7.95105e-16, 0, 0.921471, -2.22079)
-mesh = SubResource("BoxMesh_rkbax")
-skeleton = NodePath("../CollisionShape3D")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.11415e-07, 0, -2.54887, -2.54887, -1.11415e-07, 1.11415e-07, -1.11415e-07, 2.54887, -4.18532e-15, 0, 1.00258, 0.002581)
+transform = Transform3D(-2.6969e-07, 0, -6.16979, -6.16979, -2.6969e-07, 2.6969e-07, -2.6969e-07, 6.16979, -1.0131e-14, 0, 0.939204, -0.964716)
 shape = SubResource("CapsuleShape3D_kqu6x")
 
 [node name="Sunglasses" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.00462374, 0, 0, 0, 0.00462374, 0, 0, 0, 0.00462374, 0, 1.42045, 2.40107)
+transform = Transform3D(0.0130182, 0, 0, 0, 0.0130182, 0, 0, 0, 0.0130182, 0, 2.11572, 5.78827)
 mesh = ExtResource("2_rkbax")

@@ -29,33 +29,33 @@ script = ExtResource("1_feb5d")
 modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm")])
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 18.716, -0.333055)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 18.716, -104.333)
+size = Vector3(63.8784, 0.612793, 20)
+material = SubResource("StandardMaterial3D_7jktm")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, -19.925, -104.367)
 size = Vector3(63.8784, 0.612793, 20)
 material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, -0.844837, 32.6669)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, -0.844837, -71.3331)
 size = Vector3(39, 0.612793, 20)
 material = SubResource("StandardMaterial3D_ryrav")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, -0.844837, -32.3331)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, -0.844837, -136.333)
 size = Vector3(39, 0.612793, 20)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
-transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 0, -0.293747)
+transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 2.28939, 0.463756)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_80nbo")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.97585, 1, -0.293746)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, -19.925, -0.367032)
-size = Vector3(63.8784, 0.612793, 20)
-material = SubResource("StandardMaterial3D_7jktm")
+transform = Transform3D(9.64128e-08, 0.258819, -0.965926, -3.77967e-08, 0.965926, 0.258819, 1, 1.15553e-08, 1.0291e-07, -16.3973, 7, 0.31156)
 
 [node name="module_one" parent="." instance=ExtResource("2_e2o6t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
