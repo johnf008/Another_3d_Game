@@ -23,24 +23,24 @@ material = SubResource("StandardMaterial3D_rkbax")
 script = ExtResource("1_oul6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.05277e-15, 4.37114e-08, 1, 1, -1.49012e-08, -1.77636e-15, 1.49012e-08, 1, -4.37114e-08, 0, 0.992257, 0.002581)
+transform = Transform3D(2.43387e-15, 1.01055e-07, 2.31187, 2.31187, -3.44496e-08, -4.10671e-15, 3.44496e-08, 2.31187, -1.01055e-07, 0, 0.921471, 0.0910766)
 mesh = SubResource("CapsuleMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.87847e-16, 1.57361e-08, -0.36, -1.06581e-15, 0.36, 1.57361e-08, 0.36, 1.06581e-15, 6.87847e-16, 0, 0.992257, 1.00258)
+transform = Transform3D(1.59021e-15, 3.63798e-08, -0.832273, -2.46401e-15, 0.832273, 3.63798e-08, 0.832273, 2.46401e-15, 1.59021e-15, 0, 0.921471, 2.40294)
 mesh = SubResource("SphereMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.43923e-16, 7.86805e-09, -0.18, -5.32907e-16, 0.18, 7.86805e-09, 0.18, 5.32907e-16, 3.43923e-16, 0, 0.992257, -0.997419)
+transform = Transform3D(7.95105e-16, 1.81899e-08, -0.416137, -1.23201e-15, 0.416137, 1.81899e-08, 0.416137, 1.23201e-15, 7.95105e-16, 0, 0.921471, -2.22079)
 mesh = SubResource("BoxMesh_rkbax")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -1.64203e-15, 0, 1.00258, 0.002581)
+transform = Transform3D(-1.11415e-07, 0, -2.54887, -2.54887, -1.11415e-07, 1.11415e-07, -1.11415e-07, 2.54887, -4.18532e-15, 0, 1.00258, 0.002581)
 shape = SubResource("CapsuleShape3D_kqu6x")
 
 [node name="Sunglasses" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 1.20809, 1.00177)
+transform = Transform3D(0.00462374, 0, 0, 0, 0.00462374, 0, 0, 0, 0.00462374, 0, 1.42045, 2.40107)
 mesh = ExtResource("2_rkbax")

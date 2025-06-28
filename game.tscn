@@ -1,10 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2l0pjytxk854"]
+[gd_scene load_steps=10 format=3 uid="uid://b2l0pjytxk854"]
 
 [ext_resource type="PackedScene" uid="uid://cortf3dn5rur8" path="res://player/player.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://delnqgh3x7rr1" path="res://level.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://yo6c3rptu286" path="res://level/modules/module_one.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b4wymn8r8blmo" path="res://level/modules/module_one_iteration_two.tscn" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://c0mkrn36roh8e" path="res://level/background_items/awesome_sauce_building.tscn" id="4_fc0e3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
+albedo_color = Color(1, 0.401787, 0.290635, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
+albedo_color = Color(0.0362939, 0.947563, 1.54018e-06, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eow3j"]
+albedo_color = Color(0.326523, 0.915916, 7.70092e-07, 1)
 
 [sub_resource type="Environment" id="Environment_80nbo"]
 background_mode = 1
@@ -22,14 +31,17 @@ modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm")])
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 18.716, -0.333055)
 size = Vector3(63.8784, 0.612793, 20)
+material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, -0.844837, 32.6669)
 size = Vector3(39, 0.612793, 20)
+material = SubResource("StandardMaterial3D_ryrav")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, -0.844837, -32.3331)
 size = Vector3(39, 0.612793, 20)
+material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
 transform = Transform3D(-1.06581e-14, -3.3094e-15, -1, 7.57103e-08, 1, 0, 1, -7.57103e-08, -1.06581e-14, 0.0241489, 0, -0.293747)
@@ -43,8 +55,10 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.97585
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, -19.925, -0.367032)
 size = Vector3(63.8784, 0.612793, 20)
+material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="module_one" parent="." instance=ExtResource("2_e2o6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
 [node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -27, 51)

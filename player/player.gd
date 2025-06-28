@@ -5,24 +5,26 @@ extends CharacterBody3D
 var target_angle
 var flying_flag = false
 
+var og_z_pos = -0.29374700784683
+
 const UPWARD_ANGLE = 60.0
 const DOWNWARD_ANGLE = 120.0
 
 func _physics_process(delta: float) -> void:
 	const FLY_FALL_FACTOR = 5
 	 
-	if (position.y >= -6.0):
+	if (position.y >= -10.0):
 		velocity.y -= 20.0 * delta
 	else:
 		velocity.y = 0
-		position.y = -6.0
+		position.y = -10.0
 	print("Y position: " + str(position.y))
 	
-	if (position.y <= 6.0):
+	if (position.y <= 10.0):
 		velocity.y -= 5.0 * delta
 	else:
 		velocity.y = 0
-		position.y = 6.0
+		position.y = 10.0
 	
 	if Input.is_action_pressed("fly"):
 		velocity.y = 5.0
@@ -31,6 +33,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		flying_flag = false
 		rotation_degrees.x = (lerp(rotation_degrees.x, 0.0, delta * _rotation_speed))
+		
+	if Input.is_action_just_pressed("left"):
+		position.z -= 8
+	
+	if Input.is_action_just_pressed("right"):
+		position.z += 8
+	
+	print("X pos: " + str(position.x))
 	
 		
 	print(str(rotation_degrees.z))
