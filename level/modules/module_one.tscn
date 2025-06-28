@@ -4,22 +4,6 @@
 
 [node name="module_one" type="Node3D"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0393066, 18.716, 24.5)
-size = Vector3(63.8784, 0.612793, 20)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -32.9607, -0.844837, 24.5)
-size = Vector3(39, 0.612793, 20)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 32.0393, -0.844837, 24.5)
-size = Vector3(39, 0.612793, 20)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0732841, -19.925, 24.5463)
-size = Vector3(63.8784, 0.612793, 20)
-
 [node name="pipe" parent="." instance=ExtResource("1_eqi6e")]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 27, -23, 24.2017)
 
