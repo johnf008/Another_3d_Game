@@ -11,7 +11,8 @@ var speed = 8
 const UPWARD_ANGLE = 60.0
 const DOWNWARD_ANGLE = 120.0
 
-
+func _ready() -> void:
+	var modules = get_node("")
 func _physics_process(delta: float) -> void:	 
 	if (position.y >= 10.0):
 		velocity.y -= 20.0 * delta
@@ -48,3 +49,6 @@ func _physics_process(delta: float) -> void:
 	#print(str(flying_flag))
 	
 	move_and_slide()
+
+func end_game():
+	print("The game should be over now")
