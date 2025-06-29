@@ -1,4 +1,5 @@
 extends CharacterBody3D
+signal display_restart_menu
 
 @export var _rotation_speed: float = TAU *2
 
@@ -62,3 +63,5 @@ func _physics_process(delta: float) -> void:
 func end_game():
 	velocity.y = 0
 	end_game_trigger = true
+	display_restart_menu.emit()
+	

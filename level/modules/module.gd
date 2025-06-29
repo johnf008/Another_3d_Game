@@ -9,6 +9,7 @@ var speed = 25
 
 func _ready():
 	player = get_tree().get_nodes_in_group("Player")[0]
+	
 	if player and player.has_method("end_game"):
 		connect("player_collide", player.end_game)
 
