@@ -7,7 +7,7 @@ var offset = 50
 var count = 0
 
 func _ready():
-	for pos in offset:
+	for pos in amount:
 		spawnModule(pos * offset)
 		
 func spawnModule(pos):

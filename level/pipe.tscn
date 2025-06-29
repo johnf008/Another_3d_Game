@@ -2,14 +2,14 @@
 
 [ext_resource type="Material" uid="uid://j5ri0qlnpap3" path="res://materials/pipe_black.tres" id="1_hrf62"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glmxk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrf62"]
 albedo_color = Color(0.117259, 0.805162, 0, 1)
 metallic = 0.68
 metallic_specular = 1.0
 roughness = 0.4
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hrf62"]
-material = SubResource("StandardMaterial3D_glmxk")
+material = SubResource("StandardMaterial3D_hrf62")
 top_radius = 2.5
 bottom_radius = 2.5
 height = 10.0
