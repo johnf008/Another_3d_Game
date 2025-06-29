@@ -29,7 +29,7 @@ ambient_light_color = Color(0.839429, 0.804518, 0.800966, 1)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.157081, 0)
 script = ExtResource("1_feb5d")
-modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm"), ExtResource("6_ryrav")])
+modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm"), ExtResource("6_ryrav"), ExtResource("7_eow3j")])
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 43.0446, -104.333)
@@ -65,6 +65,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, 51)
 
 [node name="Awesome Sauce Building2" parent="." instance=ExtResource("4_fc0e3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, -47)
-
-[node name="module_three" parent="." instance=ExtResource("7_eow3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 0)
