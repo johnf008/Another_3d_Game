@@ -339,5 +339,13 @@ surface_material_override/11 = ExtResource("1_hoad1")
 surface_material_override/14 = ExtResource("1_hoad1")
 surface_material_override/17 = ExtResource("1_hoad1")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.310226, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_rfbs6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rfbs6")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
