@@ -71,5 +71,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, -47)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="restart_menu" parent="CanvasLayer" instance=ExtResource("8_j5wjh")]
+unique_name_in_owner = true
 
 [connection signal="display_restart_menu" from="CharacterBody3D" to="CanvasLayer/restart_menu" method="_on_character_body_3d_display_restart_menu"]

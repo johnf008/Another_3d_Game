@@ -7,6 +7,6 @@ func _on_button_pressed() -> void:
 
 
 func _on_character_body_3d_display_restart_menu() -> void:
-	stop()
+	self.show()	
 	
 	

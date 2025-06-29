@@ -1,6 +1,7 @@
 extends CharacterBody3D
 signal display_restart_menu
 
+@onready var restart_menu: Control = %restart_menu
 @export var _rotation_speed: float = TAU *2
 
 var target_angle
@@ -16,6 +17,7 @@ const DOWNWARD_ANGLE = 120.0
 
 func _ready() -> void:
 	var modules = get_node("")
+	%restart_menu.hide()
 func _physics_process(delta: float) -> void:	 
 	if (position.y >= 10.0):
 		velocity.y -= 20.0 * delta
@@ -63,5 +65,6 @@ func _physics_process(delta: float) -> void:
 func end_game():
 	velocity.y = 0
 	end_game_trigger = true
+	
 	display_restart_menu.emit()
 	
