@@ -11,8 +11,6 @@ albedo_color = Color(0.90321, 0.808008, 0, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_oul6g"]
 material = SubResource("StandardMaterial3D_oul6g")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_rkbax"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkbax"]
 albedo_color = Color(1, 0.939103, 0.66008, 1)
 
@@ -33,7 +31,9 @@ albedo_color = Color(0.828652, 0.464087, 1.15514e-06, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_rgyib"]
 material = SubResource("StandardMaterial3D_boad6")
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_rkbax"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_oul6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -46,10 +46,6 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(7.04225e-15, 1.61108e-07, -3.68573, -1.09119e-14, 3.68573, 1.61108e-07, 3.68573, 1.09119e-14, 7.04225e-15, 0.00868821, 1.85534, 0.0363933)
 mesh = SubResource("SphereMesh_oul6g")
 skeleton = NodePath("../CollisionShape3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.55649e-07, 0, -3.56084, -3.56084, -1.55649e-07, 1.55649e-07, -1.55649e-07, 3.56084, -5.84701e-15, 0.0422131, 1.78055, 0.0137178)
-shape = SubResource("SphereShape3D_rkbax")
 
 [node name="Sunglasses" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0130182, 0, 0, 0, 0.0130182, 0, 0, 0, 0.0130182, 0, 2.24053, 1.85937)
@@ -89,3 +85,7 @@ mesh = SubResource("SphereMesh_rgyib")
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.04295, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47822, 1.52271)
 mesh = SubResource("SphereMesh_rgyib")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.55649e-07, 0, -3.56084, -3.56084, -1.55649e-07, 1.55649e-07, -1.55649e-07, 3.56084, -5.84701e-15, 0.0422131, 1.78055, 0.0137178)
+shape = SubResource("SphereShape3D_rkbax")

@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/scenetomeshconverter/plugin.cfg")
 
+[global_group]
+
+Player="Just the player"
+
 [input]
 
 fly={

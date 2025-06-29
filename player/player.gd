@@ -12,9 +12,7 @@ const UPWARD_ANGLE = 60.0
 const DOWNWARD_ANGLE = 120.0
 
 
-func _physics_process(delta: float) -> void:
-	const FLY_FALL_FACTOR = 5
-	 
+func _physics_process(delta: float) -> void:	 
 	if (position.y >= 10.0):
 		velocity.y -= 20.0 * delta
 	else:

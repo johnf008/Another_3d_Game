@@ -327,9 +327,9 @@ mesh = SubResource("CylinderMesh_rfbs6")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("1_hoad1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
 
-[node name="module_two_real" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="module_two_real" type="MeshInstance3D" parent="Area3D"]
 mesh = SubResource("ArrayMesh_hoad1")
 skeleton = NodePath("../..")
 surface_material_override/2 = ExtResource("1_hoad1")
@@ -339,5 +339,5 @@ surface_material_override/11 = ExtResource("1_hoad1")
 surface_material_override/14 = ExtResource("1_hoad1")
 surface_material_override/17 = ExtResource("1_hoad1")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("ConcavePolygonShape3D_rfbs6")
