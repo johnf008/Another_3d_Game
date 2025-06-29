@@ -3,13 +3,14 @@ extends Node3D
 signal player_collide
 
 @onready var level: Node3D = get_node("/root/Game/Level")
-@onready var character_body_3d: CharacterBody3D = %CharacterBody3D
+@onready var player: Node = null
 
 var speed = 25
 
 func _ready():
-	var reciever = character_body_3d
-	connect("player_collide", character_body_3d.end_game)
+	player = get_tree().get_nodes_in_group("Player")[0]
+	if player and player.has_method("end_game"):
+		connect("player_collide", player.end_game)
 
 func _process(delta):
 	position.x -= speed * delta
