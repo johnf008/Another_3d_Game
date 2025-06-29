@@ -37,11 +37,11 @@ func _physics_process(delta: float) -> void:
 		rotation_degrees.x = (lerp(rotation_degrees.x, 0.0, delta * _rotation_speed))
 		
 	if Input.is_action_pressed("left"):
-		position.z = lerp(position.z, position.z - 8, speed * delta)
+		position.z = lerp(position.z, position.z - 5, speed * delta)
 		#print("Hello from left")
 	
 	if Input.is_action_pressed("right"):
-		position.z = lerp(position.z, position.z + 8, speed * delta)
+		position.z = lerp(position.z, position.z + 5, speed * delta)
 	
 	#print("X pos: " + str(position.x))
 	

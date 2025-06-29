@@ -58,9 +58,6 @@ environment = SubResource("Environment_80nbo")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(9.97446e-08, 0.159674, -0.98717, -2.78392e-08, 0.98717, 0.159674, 1, 1.15553e-08, 1.0291e-07, -33.0214, 38.8266, 0.31156)
 
-[node name="module_one" parent="." instance=ExtResource("2_e2o6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3286, -195.177)
-
 [node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, 51)
 
