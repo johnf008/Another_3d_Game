@@ -243,7 +243,7 @@ _surfaces = [{
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ueci"]
 albedo_texture = ExtResource("2_7tjcg")
 
-[node name="module_three" type="Node3D"]
+[node name="module_three" type="Node3D" groups=["Module"]]
 script = ExtResource("1_7tjcg")
 
 [node name="module_three_backup" type="Node3D" parent="."]
