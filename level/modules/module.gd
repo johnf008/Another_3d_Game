@@ -10,7 +10,11 @@ func _process(delta):
 		queue_free()
 
 
-func _on_area_3d_area_entered(area: Area3D) -> void:
-	if area.is_in_group("Player"):
+#func _on_area_3d_area_entered(area: Area3D) -> void:
+	
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player"):
 		print("Player has collided & i didn't crash :3 ")
 	print("Well something is inside of me")
