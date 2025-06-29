@@ -87,5 +87,5 @@ transform = Transform3D(2.04295, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47822, 1.52271)
 mesh = SubResource("SphereMesh_rgyib")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.83275e-07, 0, -4.19285, -4.19285, -1.83275e-07, 1.83275e-07, -1.83275e-07, 4.19285, -6.8848e-15, 0.0422131, 1.78055, 0.0137178)
+transform = Transform3D(-1.63398e-07, 0, -3.73811, -3.73811, -1.63398e-07, 1.63398e-07, -1.63398e-07, 3.73811, -6.1381e-15, 0.0422131, 1.78055, 0.0137178)
 shape = SubResource("SphereShape3D_rkbax")

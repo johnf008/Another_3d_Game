@@ -5,6 +5,8 @@ extends CharacterBody3D
 var target_angle
 var flying_flag = false
 
+var end_game_trigger = false
+
 var og_z_pos = -0.29374700784683
 var speed = 8
 
@@ -18,16 +20,18 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= 20.0 * delta
 	else:
 		velocity.y = 0
-		position.y = 10.0
+		if(!end_game_trigger):
+			position.y = 10.0
 	#print("Y position: " + str(position.y))
 	
 	if (position.y <= 55.0):
 		velocity.y -= 20.0 * delta
 	else:
 		velocity.y = 0
-		position.y = 55.0
+		if(!end_game_trigger):
+			position.y = 55.0
 	
-	if Input.is_action_pressed("fly"):
+	if Input.is_action_pressed("fly") && !end_game_trigger:
 		velocity.y = 20.0
 		flying_flag = true
 		rotation_degrees.x = (lerp(rotation_degrees.x, 60.0, delta * _rotation_speed))
@@ -35,13 +39,18 @@ func _physics_process(delta: float) -> void:
 		flying_flag = false
 		rotation_degrees.x = (lerp(rotation_degrees.x, 0.0, delta * _rotation_speed))
 		
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left") && !end_game_trigger:
 		position.z = lerp(position.z, position.z - 5, speed * delta)
 		#print("Hello from left")
 	
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right") && !end_game_trigger:
 		position.z = lerp(position.z, position.z + 5, speed * delta)
 	
+	if end_game_trigger:
+		if(position.y >= 7.0):
+			velocity.y -= 1
+		set_collision_mask_value(1, false)
+		set_collision_mask_value(2, true)
 	#print("X pos: " + str(position.x))
 	
 		
@@ -51,4 +60,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func end_game():
-	print("The game should be over now")
+	velocity.y = 0
+	end_game_trigger = true
