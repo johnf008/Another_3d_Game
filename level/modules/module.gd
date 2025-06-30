@@ -7,6 +7,9 @@ signal player_collide
 @onready var area_3d_coin: Area3D = %Area3D_Coin
 @onready var label: Label = get_node("/root/Game/Label")
 
+@onready var coin_point: Node3D = %Coin_Point
+@onready var coin_point_2: Node3D = %Coin_Point2
+@onready var coin_point_3: Node3D = %Coin_Point3
 
 var speed = 25
 
@@ -35,8 +38,15 @@ func _on_area_3d_coin_body_entered(body: Node3D) -> void:
 
 func _on_area_3d_coin_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("Player"):
+		for child in area_3d_coin.get_children():
+			if child is CollisionShape3D:
+				var id = area_3d_coin.shape_find_owner(local_shape_index)
+				var shape = area_3d_coin.shape_owner_get_owner(id)
+				area_3d_coin.shape_owner_set_meta_data(id, "one")
+				var test = 0
+				print("Shape node name: " + "idk")
 		print("You touched me :/")
-		print("The body (if godot doesn't crash): " + str(local_shape_index))
+		print("The body (if godot doesn't crash): ")
 		Global.total_score += 1
 		%Area3D_Coin.visible = false
 		print("Score: " + str(Global.total_score))

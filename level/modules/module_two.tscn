@@ -366,6 +366,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4534, 15.8501, 0)
 shape = SubResource("SphereShape3D_pvhsf")
 
 [node name="Coin_Point" parent="Area3D_Coin/CollisionShape3D" instance=ExtResource("3_4ovj2")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228004, -3.27339, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D_Coin"]
@@ -373,6 +374,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.1362, 26.4023, -25.7332)
 shape = SubResource("SphereShape3D_5r305")
 
 [node name="Coin_Point2" parent="Area3D_Coin/CollisionShape3D2" instance=ExtResource("3_4ovj2")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0909348, -3.19554, -0.27944)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Area3D_Coin"]
@@ -380,6 +382,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4364, 26.0277, 28.1126)
 shape = SubResource("SphereShape3D_3luuj")
 
 [node name="Coin_Point3" parent="Area3D_Coin/CollisionShape3D3" instance=ExtResource("3_4ovj2")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.19803, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
