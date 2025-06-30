@@ -10,6 +10,7 @@ func stop_incoming_pipes():
 	
 
 func _on_button_pressed() -> void:
+	Global.total_score = 0
 	get_tree().reload_current_scene()
 
 func _on_character_body_3d_display_restart_menu() -> void:
