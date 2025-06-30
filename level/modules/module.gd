@@ -42,12 +42,15 @@ func _on_area_3d_coin_body_shape_entered(body_rid: RID, body: Node3D, body_shape
 			if child is CollisionShape3D:
 				var id = area_3d_coin.shape_find_owner(local_shape_index)
 				var shape = area_3d_coin.shape_owner_get_owner(id)
-				area_3d_coin.shape_owner_set_meta_data(id, "one")
-				var test = 0
-				print("Shape node name: " + "idk")
+				print("Shape node name: " + str(shape.name))
+				var coin_type = shape.get_child(0)
+				
+				print("Coin TYpe " + str(coin_type))
+				
+				coin_type.visible = false
 		print("You touched me :/")
-		print("The body (if godot doesn't crash): ")
+		print("The body (if godot doesn't crash): " )
 		Global.total_score += 1
-		%Area3D_Coin.visible = false
+		#%Area3D_Coin.visible = false
 		print("Score: " + str(Global.total_score))
 		label.text = "Score: " + str(Global.total_score)

@@ -67,3 +67,4 @@ func end_game():
 	
 	display_restart_menu.emit()
 	
+	
