@@ -42,7 +42,9 @@ func _on_area_3d_coin_body_shape_entered(body_rid: RID, body: Node3D, body_shape
 			if child is CollisionShape3D:
 				var id = area_3d_coin.shape_find_owner(local_shape_index)
 				var shape = area_3d_coin.shape_owner_get_owner(id)
+				
 				print("Shape node name: " + str(shape.name))
+				
 				var coin_type = shape.get_child(0)
 				
 				print("Coin TYpe " + str(coin_type))
