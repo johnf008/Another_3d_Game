@@ -41,11 +41,11 @@ func _physics_process(delta: float) -> void:
 		flying_flag = false
 		rotation_degrees.x = (lerp(rotation_degrees.x, 0.0, delta * _rotation_speed))
 		
-	if Input.is_action_pressed("left") && !end_game_trigger:
+	if Input.is_action_pressed("left") && !end_game_trigger && (position.z > -24):
 		position.z = lerp(position.z, position.z - 5, speed * delta)
 		#print("Hello from left")
 	
-	if Input.is_action_pressed("right") && !end_game_trigger:
+	if Input.is_action_pressed("right") && !end_game_trigger && (position.z < 26):
 		position.z = lerp(position.z, position.z + 5, speed * delta)
 	
 	if end_game_trigger:
@@ -53,7 +53,8 @@ func _physics_process(delta: float) -> void:
 			velocity.y -= 1
 		set_collision_mask_value(1, false)
 		set_collision_mask_value(2, true)
-	#print("X pos: " + str(position.x))
+	print("X pos: " + str(position.x))
+	print("Z pos: " + str(position.z))
 	
 		
 	#print(str(rotation_degrees.z))
