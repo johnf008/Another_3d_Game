@@ -5,6 +5,8 @@ signal player_collide
 @onready var level: Node3D = get_node("/root/Game/Level")
 @onready var player: Node = null
 @onready var area_3d_coin: Area3D = %Area3D_Coin
+@onready var label: Label = get_node("/root/Game/Label")
+
 
 var speed = 25
 
@@ -33,3 +35,4 @@ func _on_area_3d_coin_body_entered(body: Node3D) -> void:
 		Global.total_score += 1
 		%Area3D_Coin.visible = false
 		print("Score: " + str(Global.total_score))
+		label.text = "Score: " + str(Global.total_score)

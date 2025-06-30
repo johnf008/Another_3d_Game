@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var modules: Array[PackedScene] = []
+
 var amount = 10
 var random = RandomNumberGenerator.new()
 var offset = 50
@@ -18,3 +19,4 @@ func spawnModule(pos):
 	add_child(instance)
 	count += 1
 	print(str(count))
+	
