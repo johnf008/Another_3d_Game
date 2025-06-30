@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://5nrqcee5ev1y"]
+[gd_scene load_steps=15 format=4 uid="uid://5nrqcee5ev1y"]
 
 [ext_resource type="Material" uid="uid://j5ri0qlnpap3" path="res://materials/pipe_black.tres" id="1_0ueci"]
 [ext_resource type="Script" uid="uid://cb85mml3jcob7" path="res://level/modules/module.gd" id="1_7tjcg"]
 [ext_resource type="Texture2D" uid="uid://bai57nquxxveh" path="res://materials/Sign.svg" id="2_7tjcg"]
+[ext_resource type="PackedScene" uid="uid://vpkayrgr7iyh" path="res://coin_point.tscn" id="4_pbvmo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glmxk"]
 albedo_color = Color(0.117259, 0.805162, 0, 1)
@@ -243,6 +244,12 @@ _surfaces = [{
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ueci"]
 albedo_texture = ExtResource("2_7tjcg")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_gwj47"]
+radius = 3.89
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_heb42"]
+radius = 3.89
+
 [node name="module_three" type="Node3D" groups=["Module"]]
 script = ExtResource("1_7tjcg")
 
@@ -371,4 +378,22 @@ surface_material_override/14 = ExtResource("1_0ueci")
 surface_material_override/17 = ExtResource("1_0ueci")
 surface_material_override/18 = SubResource("StandardMaterial3D_0ueci")
 
+[node name="Area3D_Coin" type="Area3D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_Coin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.1862, 25.4786, -25.9301)
+shape = SubResource("SphereShape3D_gwj47")
+
+[node name="Coin_Point" parent="Area3D_Coin/CollisionShape3D" instance=ExtResource("4_pbvmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.87503, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D_Coin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7701, 26.0639, 28.1877)
+shape = SubResource("SphereShape3D_heb42")
+
+[node name="Coin_Point" parent="Area3D_Coin/CollisionShape3D2" instance=ExtResource("4_pbvmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.98149, 0)
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_shape_entered" from="Area3D_Coin" to="." method="_on_area_3d_coin_body_shape_entered"]
