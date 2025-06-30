@@ -30,8 +30,13 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 
 func _on_area_3d_coin_body_entered(body: Node3D) -> void:
+	pass
+
+
+func _on_area_3d_coin_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group("Player"):
 		print("You touched me :/")
+		print("The body (if godot doesn't crash): " + str(local_shape_index))
 		Global.total_score += 1
 		%Area3D_Coin.visible = false
 		print("Score: " + str(Global.total_score))
