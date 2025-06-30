@@ -1,19 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2l0pjytxk854"]
+[gd_scene load_steps=13 format=3 uid="uid://b2l0pjytxk854"]
 
 [ext_resource type="PackedScene" uid="uid://cortf3dn5rur8" path="res://player/player.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://delnqgh3x7rr1" path="res://level.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://yo6c3rptu286" path="res://level/modules/module_one.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://b4wymn8r8blmo" path="res://level/modules/module_one_iteration_two.tscn" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://c0mkrn36roh8e" path="res://level/background_items/awesome_sauce_building.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://dv6nuxeqno5qn" path="res://level/modules/module_two.tscn" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://5nrqcee5ev1y" path="res://level/modules/module_three.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ceud5fm4d11my" path="res://restart_menu.tscn" id="8_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://drmdlk3jb646y" path="res://materials/grass.jpg" id="9_vef74"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
-albedo_color = Color(1, 0.401787, 0.290635, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
-albedo_color = Color(0.0362939, 0.947563, 1.54018e-06, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eow3j"]
-albedo_color = Color(0.326523, 0.915916, 7.70092e-07, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
+font_size = 51
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Environment" id="Environment_80nbo"]
 background_mode = 1
@@ -21,54 +21,12 @@ background_color = Color(0.386384, 0.874845, 0.999991, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.839429, 0.804518, 0.800966, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
-font_size = 51
-shadow_size = 6
-shadow_color = Color(0, 0, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
+albedo_color = Color(6.97896e-07, 0.328132, 0.071612, 1)
+albedo_texture = ExtResource("9_vef74")
+uv1_triplanar = true
 
 [node name="Game" type="Node3D"]
-
-[node name="Level" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.157081, 0)
-script = ExtResource("1_feb5d")
-modules = Array[PackedScene]([ExtResource("7_eow3j")])
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5241, 43.0446, -104.333)
-size = Vector3(63.8784, 0.612793, 20)
-material = SubResource("StandardMaterial3D_7jktm")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.5705, 4.4036, -104.367)
-size = Vector3(63.8784, 0.612793, 20)
-material = SubResource("StandardMaterial3D_7jktm")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5242, 23.4838, -71.3331)
-size = Vector3(39, 0.612793, 20)
-material = SubResource("StandardMaterial3D_ryrav")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 24.5241, 23.4838, -136.333)
-size = Vector3(39, 0.612793, 20)
-material = SubResource("StandardMaterial3D_eow3j")
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
-unique_name_in_owner = true
-transform = Transform3D(8.74228e-08, -3.3094e-15, 1, 7.57103e-08, 1, 0, -1, 7.57103e-08, 8.74228e-08, 0.0241489, 26.618, 0.463756)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_80nbo")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(9.97446e-08, 0.159674, -0.98717, -2.78392e-08, 0.98717, 0.159674, 1, 1.15553e-08, 1.0291e-07, -33.0214, 38.8266, 0.31156)
-
-[node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, 51)
-
-[node name="Awesome Sauce Building2" parent="." instance=ExtResource("4_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, -47)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -83,5 +41,75 @@ offset_right = 216.0
 offset_bottom = 98.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_7jktm")
+
+[node name="Level" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.157081, 0)
+script = ExtResource("1_feb5d")
+modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm"), ExtResource("7_eow3j"), ExtResource("6_ryrav")])
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_80nbo")]
+unique_name_in_owner = true
+transform = Transform3D(8.74228e-08, -3.3094e-15, 1, 7.57103e-08, 1, 0, -1, 7.57103e-08, 8.74228e-08, 0.0241489, 26.618, 0.463756)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_80nbo")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(9.97446e-08, 0.159674, -0.98717, -2.78392e-08, 0.98717, 0.159674, 1, 1.15553e-08, 1.0291e-07, -33.0214, 38.8266, 0.31156)
+metadata/_edit_lock_ = true
+
+[node name="Awesome Sauce Building" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, 51)
+
+[node name="Awesome Sauce Building2" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -2.6714, -47)
+
+[node name="Awesome Sauce Building3" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.2365, -2.6714, 51)
+
+[node name="Awesome Sauce Building4" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.2365, -2.6714, -47)
+
+[node name="Awesome Sauce Building5" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3901, -2.6714, 51)
+
+[node name="Awesome Sauce Building6" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3901, -2.6714, -47)
+
+[node name="Awesome Sauce Building7" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6266, -2.6714, 51)
+
+[node name="Awesome Sauce Building8" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6266, -2.6714, -47)
+
+[node name="Awesome Sauce Building9" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.89031, -2.6714, 51)
+
+[node name="Awesome Sauce Building10" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.89031, -2.6714, -47)
+
+[node name="Awesome Sauce Building11" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.34617, -2.6714, 51)
+
+[node name="Awesome Sauce Building12" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.34617, -2.6714, -47)
+
+[node name="Awesome Sauce Building13" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.4699, -2.6714, 51)
+
+[node name="Awesome Sauce Building14" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.4699, -2.6714, -47)
+
+[node name="Awesome Sauce Building15" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.706, -2.6714, 51)
+
+[node name="Awesome Sauce Building16" parent="." instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.706, -2.6714, -47)
+
+[node name="grass" type="CSGBox3D" parent="."]
+transform = Transform3D(10.73, 0, 0, 0, 1, 0, 0, 0, 64.35, 11.5, -3.1979, 0)
+size = Vector3(24, 1, 2)
+material = SubResource("StandardMaterial3D_hve3p")
 
 [connection signal="display_restart_menu" from="CharacterBody3D" to="CanvasLayer/restart_menu" method="_on_character_body_3d_display_restart_menu"]
