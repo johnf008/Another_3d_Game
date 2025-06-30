@@ -16,7 +16,6 @@ const UPWARD_ANGLE = 60.0
 const DOWNWARD_ANGLE = 120.0
 
 func _ready() -> void:
-	var modules = get_node("")
 	%restart_menu.hide()
 func _physics_process(delta: float) -> void:	 
 	if (position.y >= 10.0):
