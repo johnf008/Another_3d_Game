@@ -448,12 +448,12 @@ shape = SubResource("ConcavePolygonShape3D_e6hmk")
 [node name="Area3D_Coin" type="Area3D" parent="."]
 unique_name_in_owner = true
 
-[node name="Coin_Point" parent="Area3D_Coin" instance=ExtResource("3_dfjqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1363, 33.1419, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_Coin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7033, 35.9821, 0)
 shape = SubResource("SphereShape3D_hoqxs")
 
+[node name="Coin_Point" parent="Area3D_Coin/CollisionShape3D" instance=ExtResource("3_dfjqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.567005, -2.84017, 0)
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Area3D_Coin" to="." method="_on_area_3d_coin_body_entered"]
+[connection signal="body_shape_entered" from="Area3D_Coin" to="." method="_on_area_3d_coin_body_shape_entered"]

@@ -7,9 +7,6 @@ signal player_collide
 @onready var area_3d_coin: Area3D = %Area3D_Coin
 @onready var label: Label = get_node("/root/Game/Label")
 
-@onready var coin_point: Node3D = %Coin_Point
-@onready var coin_point_2: Node3D = %Coin_Point2
-@onready var coin_point_3: Node3D = %Coin_Point3
 
 var speed = 25
 
