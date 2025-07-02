@@ -6,13 +6,13 @@ albedo_color = Color(0.539372, 0.738839, 0.492922, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_2tay7"]
 material = SubResource("StandardMaterial3D_rgtrp")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ewi3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tay7"]
 albedo_color = Color(0.738283, 0.898198, 0.797412, 1)
 metallic = 1.0
 roughness = 0.31
 
 [sub_resource type="BoxMesh" id="BoxMesh_84gix"]
-material = SubResource("StandardMaterial3D_8ewi3")
+material = SubResource("StandardMaterial3D_2tay7")
 
 [node name="Awesome Sauce Building" type="Node3D"]
 

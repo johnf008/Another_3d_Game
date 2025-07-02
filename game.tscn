@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2l0pjytxk854"]
+[gd_scene load_steps=14 format=3 uid="uid://b2l0pjytxk854"]
 
 [ext_resource type="PackedScene" uid="uid://cortf3dn5rur8" path="res://player/player.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://delnqgh3x7rr1" path="res://level.gd" id="1_feb5d"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://5nrqcee5ev1y" path="res://level/modules/module_three.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://ceud5fm4d11my" path="res://restart_menu.tscn" id="8_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://drmdlk3jb646y" path="res://materials/grass.jpg" id="9_vef74"]
+[ext_resource type="PackedScene" uid="uid://cv433aww3ca8y" path="res://level/background_items/awesome_sauce_skyscraper.tscn" id="10_hve3p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
 font_size = 51
@@ -44,7 +45,7 @@ label_settings = SubResource("LabelSettings_7jktm")
 
 [node name="Level" type="Node3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.157081, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6378, -0.157081, 0)
 script = ExtResource("1_feb5d")
 modules = Array[PackedScene]([ExtResource("2_e2o6t"), ExtResource("3_7jktm"), ExtResource("7_eow3j"), ExtResource("6_ryrav")])
 
@@ -111,5 +112,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.706, -2.6714, -47)
 transform = Transform3D(10.73, 0, 0, 0, 1, 0, 0, 0, 64.35, 11.5, -3.1979, 0)
 size = Vector3(24, 1, 2)
 material = SubResource("StandardMaterial3D_hve3p")
+
+[node name="Node3D" parent="." instance=ExtResource("10_hve3p")]
+transform = Transform3D(0.12749, 0, 0, 0, 0.12749, 0, 0, 0, 0.12749, 33.6533, -2.82829, -45.4915)
+
+[node name="Node3D2" parent="." instance=ExtResource("10_hve3p")]
+transform = Transform3D(-0.12749, 0, -3.72529e-09, 0, 0.12749, 0, 3.72529e-09, 0, -0.12749, 33.6533, -2.82829, 49.5085)
 
 [connection signal="display_restart_menu" from="CharacterBody3D" to="CanvasLayer/restart_menu" method="_on_character_body_3d_display_restart_menu"]

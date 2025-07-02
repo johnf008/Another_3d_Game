@@ -18,7 +18,7 @@ func _ready():
 
 func _process(delta):
 	position.x -= speed * delta
-	if(position.x < -37):
+	if(position.x < -75):
 		level.spawnModule(position.x + (level.amount * level.offset))
 		queue_free()
 

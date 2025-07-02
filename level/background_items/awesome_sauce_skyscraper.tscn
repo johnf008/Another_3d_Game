@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://cv433aww3ca8y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4guk"]
+albedo_color = Color(0.921059, 0.509416, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgtrp"]
+albedo_color = Color(0.539372, 0.738839, 0.492922, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o4guk"]
+material = SubResource("StandardMaterial3D_rgtrp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7ftp"]
+albedo_color = Color(0.142261, 0.0756669, 0.00379839, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m7ftp"]
+material = SubResource("StandardMaterial3D_m7ftp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syxnb"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ewi3"]
+albedo_color = Color(0.738283, 0.898198, 0.797412, 1)
+metallic = 1.0
+roughness = 0.31
+
+[sub_resource type="BoxMesh" id="BoxMesh_syxnb"]
+material = SubResource("StandardMaterial3D_8ewi3")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(29.7869, 0, 0, 0, 99.976, 0, 0, 0, 25.11, 1.39537, 51.0055, 0)
+material_override = SubResource("StandardMaterial3D_o4guk")
+mesh = SubResource("BoxMesh_o4guk")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(30.6758, 0, 0, 0, 24.1056, 0, 0, 0, 25.8583, 1.14958, 112, -0.328449)
+mesh = SubResource("BoxMesh_m7ftp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(22.7325, 0, 0, 0, 17.8636, 0, 0, 0, 19.1624, 1.14958, 132.474, -0.328449)
+mesh = SubResource("BoxMesh_m7ftp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.86701, 0, 0, 0, 101.299, 0, 0, 0, 7.47448, 1.14958, 172.569, -0.328449)
+material_override = SubResource("StandardMaterial3D_syxnb")
+mesh = SubResource("BoxMesh_m7ftp")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.5176, 0, 0, 0, 23.9572, 0, 0, 0, 3.75378, 1.27729, 22.4515, 12.5359)
+mesh = SubResource("BoxMesh_syxnb")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.5176, 0, 0, 0, 23.9572, 0, 0, 0, 3.75378, 1.27729, 55.8754, 12.5359)
+mesh = SubResource("BoxMesh_syxnb")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.5176, 0, 0, 0, 23.9572, 0, 0, 0, 3.75378, 1.27729, 87.0221, 12.5359)
+mesh = SubResource("BoxMesh_syxnb")

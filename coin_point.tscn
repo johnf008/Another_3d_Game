@@ -12,6 +12,21 @@ albedo_color = Color(0.671797, 0.675741, 0.0750116, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_x1ht8"]
 material = SubResource("StandardMaterial3D_yj2ub")
 
+[sub_resource type="Animation" id="Animation_l6ebv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, -1.5708)]
+}
+
 [sub_resource type="Animation" id="Animation_c5kwr"]
 resource_name = "spin"
 length = 0.51
@@ -29,21 +44,6 @@ tracks/0/keys = {
 "values": [Vector3(0, -1.5708, -1.5708), Vector3(0, 1.5708, -1.5708)]
 }
 
-[sub_resource type="Animation" id="Animation_l6ebv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -1.5708, -1.5708)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0vvkq"]
 _data = {
 &"RESET": SubResource("Animation_l6ebv"),
@@ -53,7 +53,7 @@ _data = {
 [node name="Coin_Point" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.21117e-14, -2.77083e-08, -6.33893, -6.33893, -2.77083e-08, 0, -2.77083e-07, 0.633893, -2.77083e-07, 0, 3.18554, 0)
+transform = Transform3D(8.30674e-11, -2.29469e-06, -6.33893, -6.33893, -2.29469e-06, 0, -2.29469e-05, 0.633893, -2.29469e-05, 0, 3.18554, 0)
 mesh = SubResource("CylinderMesh_b3tdi")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
